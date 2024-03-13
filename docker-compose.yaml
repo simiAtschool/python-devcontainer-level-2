@@ -3,7 +3,7 @@ version: '3.9'
 services:
 
   app:
-    build: .
+    image: mcr.microsoft.com/devcontainers/python:1-3.12-bullseye
     ports:
       - "8000:8000"
     environment:
