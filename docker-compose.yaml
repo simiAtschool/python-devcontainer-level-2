@@ -7,7 +7,7 @@ services:
     ports:
       - "8000:8000"
     environment:
-      - DATABASE_URL=mysql+pymysql://root:password@db:3306/tododb
+      - DATABASE_URL=${DATABASE_URL}
     depends_on:
       - db
   db:
@@ -17,7 +17,7 @@ services:
     volumes:
       - dbdaten:/var/lib/mysql
     environment:
-      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
       - MYSQL_DATABASE=tododb
   
   tool:
